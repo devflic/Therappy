@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>Health</title>
+      <style>
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        li {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+    
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+    
+        .username {
+          font-size: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <ul>
+        <li>
+          <img src="image.jpeg" alt="Profile Pic">
+          <span class="username">Dr Kirago</span>
+        </li>
+        <br>
+        <br>
+        <li>
+            <img src="download (3).jpeg" alt="Profile Pic">
+            <span class="username">Dr Omondi</span>
+          </li>
+          <br>
+          <br>
+          <li>
+            <img src="download (1).jpeg" alt="Profile Pic">
+            <span class="username">Dr Olume</span>
+          </li>
+          <br>
+          <br>
+        <li>
+          <img src="download.jpeg" alt="Profile Pic">
+          <span class="username">Dr Grinch</span>
+        </li>
+      </ul>
+    
+      <script>
+        // Get all the user list items
+        const userListItems = document.querySelectorAll('ul li');
+    
+        // Add a click event listener to each user list item
+        userListItems.forEach(listItem => {
+          listItem.addEventListener('click', () => {
+            // Get the username of the clicked user
+            const username = listItem.querySelector('.username').textContent;
+    
+            // Redirect to the user's charts page
+            window.location.href = `https://example.com/charts/${username}`;
+          });
+        });
+      </script>
+    </body>
+    </html>
+    
+    
+</body>
+</html>
